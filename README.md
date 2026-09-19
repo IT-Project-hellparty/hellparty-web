@@ -30,40 +30,45 @@ python3 -m http.server 8000
 
 최초 1회만 설정하면, 이후로는 `main` 에 푸시할 때마다 자동으로 반영된다.
 
+설정은 이미 끝나 있다. `main` 에 푸시하면 1~2분 안에 반영된다.
+
 ```bash
-git init
 git add -A
-git commit -m "feat: 개발사 소개 사이트 초기 구현"
-git branch -M main
-
-# GitHub 에서 daunload/hellparty-web 저장소를 만든 뒤
-git remote add origin git@github.com:daunload/hellparty-web.git
-git push -u origin main
+git commit -m "메시지"
+git push
 ```
 
-`gh` CLI 가 있으면 저장소 생성부터 푸시까지 한 번에 된다.
+저장소는 조직 소유(`IT-Project-hellparty/hellparty-web`)이고, remote 는 SSH 별칭을 쓴다.
+
+```
+origin  git@github.com-daunload:IT-Project-hellparty/hellparty-web.git
+```
+
+**`github.com` 이 아니라 `github.com-daunload` 인 것이 중요하다.** 이 머신에는 GitHub
+계정이 두 개(`daunload`, `seodaun4904`) 설정돼 있고, 조직에 접근할 수 있는 쪽은
+`daunload` 뿐이다. `~/.ssh/config` 에 `Host github.com` 항목이 없어서 별칭 없이는
+`Permission denied (publickey)` 로 실패한다.
+
+커밋 작성자도 이 저장소에 한해 고정해 두었다.
 
 ```bash
-gh repo create daunload/hellparty-web --public --source=. --remote=origin --push
+git config user.name   # daunload
+git config user.email  # daun4799@gmail.com
 ```
-
-푸시한 뒤 **Settings → Pages → Build and deployment** 에서
-Source 를 `Deploy from a branch`, Branch 를 `main` / `/ (root)` 로 지정한다.
-첫 배포까지 1~2분 걸린다.
 
 ## 네이버 개발자센터에 넣을 값
 
 | 항목 | 값 |
 |---|---|
-| 서비스 URL | `https://daunload.github.io/hellparty-web/` |
-| 개인정보처리방침 URL | `https://daunload.github.io/hellparty-web/privacy.html` |
-| 이용약관 URL | `https://daunload.github.io/hellparty-web/terms.html` |
+| 서비스 URL | `https://it-project-hellparty.github.io/hellparty-web/` |
+| 개인정보처리방침 URL | `https://it-project-hellparty.github.io/hellparty-web/privacy.html` |
+| 이용약관 URL | `https://it-project-hellparty.github.io/hellparty-web/terms.html` |
 
 ## 고칠 때 주의할 점
 
 - **링크는 반드시 상대경로로 쓴다.** 이 사이트는 계정 루트가 아니라
   `/hellparty-web/` 하위에 올라간다. `/privacy.html` 같은 절대경로를 쓰면
-  `daunload.github.io/privacy.html` 을 찾아가 404 가 난다.
+  `it-project-hellparty.github.io/privacy.html` 을 찾아가 404 가 난다.
 - **검수 신청서의 "제공 받는 정보" 와 `privacy.html` 제1조가 어긋나면 반려된다.**
   네이버에서 받는 항목을 늘리면 방침도 같이 고쳐야 한다.
 - **인프라가 바뀌면 `privacy.html` 제6조(위탁·국외 이전) 표를 갱신한다.**
