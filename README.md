@@ -71,11 +71,14 @@ git config user.email  # daun4799@gmail.com
   `it-project-hellparty.github.io/privacy.html` 을 찾아가 404 가 난다.
 - **검수 신청서의 "제공 받는 정보" 와 `privacy.html` 제1조가 어긋나면 반려된다.**
   네이버에서 받는 항목을 늘리면 방침도 같이 고쳐야 한다.
-- **인프라가 바뀌면 `privacy.html` 제6조(위탁·국외 이전) 표를 갱신한다.**
-  현재 Firebase Auth(미국) / Cloud Run 싱가포르 / Neon 을 적어 두었다.
+- **인프라가 바뀌면 `privacy.html` 제8조(위탁·국외 이전) 표를 갱신한다.**
+  현재 Firebase Auth·Cloud Messaging·Remote Config(미국) / Cloud Run 싱가포르 / Neon 을 적어 두었다.
+- **앱의 가입 동의 화면 문구와 버전은 이 문서들과 짝이다**(앱 저장소 #149). `privacy.html`·`terms.html` 을
+  고쳐 시행일이 바뀌면 앱 `app/lib/shared/domain/consent.dart` 와 서버 `server/internal/consent` 의 버전
+  (시행일)과 화면 문구도 같은 릴리스에서 바꿔야 한다. 기존 회원은 다음 로그인 때 다시 동의한다.
   Cloud Run 리전은 앱 저장소의 `Taskfile.yml` 과 `.github/workflows/deploy.yml` 에서
-  확인한 `asia-southeast1` 이고, **Neon 리전은 아직 확인하지 못해 소스에 TODO 주석을
-  남겨 두었다.** Neon 콘솔에서 확인 후 정정할 것.
+  확인한 `asia-southeast1` 이다. Neon 은 로컬·dev 연결 주소가 `ap-southeast-1`(싱가포르)인 것을
+  확인했다. prod DB 리전은 Neon 콘솔에서 따로 확인할 것.
 - 법률 문서는 변호사 검토를 거친 것이 아니라 검수 통과에 필요한 항목을 갖춘 초안이다.
 
 ## 관련 문서
