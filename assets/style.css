@@ -291,3 +291,7 @@ tbody tr:last-child td { border-bottom: none; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; margin: 0; padding: 0; }
 .site-footer a { color: var(--text-muted); text-decoration: none; }
 .site-footer a:hover { color: var(--text); text-decoration: underline; }
+.footer-biz {
+  flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 4px 16px;
+  list-style: none; margin: 0; padding: 0; font-size: .8rem;
+}
