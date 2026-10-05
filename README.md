@@ -1,6 +1,6 @@
 # hellparty-web
 
-Hellparty 앱의 공개 안내 사이트. **네이버 로그인 검수에 제출할 서비스 URL 과
+Helparty 앱의 공개 안내 사이트. **네이버 로그인 검수에 제출할 서비스 URL 과
 개인정보처리방침 URL 을 확보하는 것**이 이 저장소의 존재 이유다.
 
 빌드 도구도 의존성도 없다. HTML·CSS·JS 파일을 그대로 GitHub Pages 가 서빙한다.
