@@ -72,7 +72,7 @@ git config user.email  # daun4799@gmail.com
 - **검수 신청서의 "제공 받는 정보" 와 `privacy.html` 제1조가 어긋나면 반려된다.**
   네이버에서 받는 항목을 늘리면 방침도 같이 고쳐야 한다.
 - **인프라가 바뀌면 `privacy.html` 제8조(위탁·국외 이전) 표를 갱신한다.**
-  현재 Firebase Auth·Cloud Messaging·Remote Config(미국) / Cloud Run 싱가포르 / Neon 을 적어 두었다.
+  현재 Firebase Auth·Cloud Messaging·Remote Config·Analytics, Google AdMob(미국) / Cloud Run 싱가포르 / Neon 을 적어 두었다.
 - **앱의 가입 동의 화면 문구와 버전은 이 문서들과 짝이다**(앱 저장소 #149). `privacy.html`·`terms.html` 을
   고쳐 시행일이 바뀌면 앱 `app/lib/shared/domain/consent.dart` 와 서버 `server/internal/consent` 의 버전
   (시행일)과 화면 문구도 같은 릴리스에서 바꿔야 한다. 기존 회원은 다음 로그인 때 다시 동의한다.
