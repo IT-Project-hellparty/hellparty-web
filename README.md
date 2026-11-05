@@ -8,12 +8,16 @@ Helparty 앱의 공개 안내 사이트. **네이버 로그인 검수에 제출�
 ## 구조
 
 ```
-index.html     홈 — 서비스 소개, 로그인 수단, 개발사 소개·문의(#contact)
+index.html     홈 — 앱 소개(헬파티 저장소 hosting/links/onboarding.html 과 같은 구성),
+               로그인 수단·받는 정보(#login), 개발사 소개·문의(#contact), 사업자 정보
 privacy.html   개인정보처리방침
 terms.html     서비스 이용약관
 assets/
-  style.css    전 페이지 공통 스타일
-  site.js      모바일 내비 토글, 현재 페이지 표시
+  style.css    약관·방침 페이지 공통 스타일
+  site.js      약관·방침 페이지의 모바일 내비 토글, 현재 페이지 표시
+  home.css     홈 전용. onboarding.css 복사본 + 맨 아래 이 사이트 전용 규칙
+  home.js      홈 전용. onboarding.js 복사본(이미지 경로만 assets/img/ 로 바꿈)
+  img/         홈 이미지. hosting/links/img/ 복사본
 .nojekyll      GitHub Pages 의 Jekyll 처리를 건너뛴다
 ```
 
@@ -65,6 +69,10 @@ git config user.email  # daun4799@gmail.com
 | 이용약관 URL | `https://it-project-hellparty.github.io/hellparty-web/terms.html` |
 
 ## 고칠 때 주의할 점
+
+- **홈은 `helparty.web.app/onboarding` 의 복사본이다.** 그쪽을 고치면 여기도 같이 고친다.
+  복사할 때 절대경로(`/img/`, `/onboarding.css`)를 `assets/` 상대경로로 바꾸고, 이 사이트에만 있는
+  로그인 안내(#login)·개발사(#contact)·사업자 정보 푸터는 남긴다. 네이버 검수가 서비스 URL 에서 이 내용을 본다.
 
 - **링크는 반드시 상대경로로 쓴다.** 이 사이트는 계정 루트가 아니라
   `/hellparty-web/` 하위에 올라간다. `/privacy.html` 같은 절대경로를 쓰면

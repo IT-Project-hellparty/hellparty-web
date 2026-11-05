@@ -2,160 +2,365 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Helparty — 자기관리를 게임처럼</title>
-<meta name="description" content="걸음·수면·식단·운동을 인증해 캐릭터를 키우고, 친구들과 파티를 만들어 몬스터를 물리치는 자기관리 모바일 앱 Helparty의 공식 안내 페이지입니다.">
-<meta property="og:title" content="Helparty — 자기관리를 게임처럼">
-<meta property="og:description" content="걸음·수면·식단·운동을 인증해 캐릭터를 키우고, 친구들과 파티를 만들어 몬스터를 물리치는 자기관리 모바일 앱.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141110" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<title>헬파티 - 친구랑 같이 하는 자기관리 RPG</title>
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff6a3d'/><stop offset='.5' stop-color='%23d8351b'/><stop offset='1' stop-color='%236d28d9'/></linearGradient></defs><rect width='32' height='32' rx='9' fill='url(%23g)'/></svg>">
-<link rel="stylesheet" href="assets/style.css">
+<meta property="og:site_name" content="헬파티">
+<meta property="og:title" content="헬파티 - 매번 실패하는 다이어트 자기관리!">
+<meta property="og:description" content="당신을 헬파티에 초대합니다">
+<meta property="og:url" content="https://it-project-hellparty.github.io/hellparty-web/">
+<meta property="og:image" content="https://helparty.web.app/og-invite.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="description" content="평소처럼 자고, 먹고, 걷고, 운동하면 캐릭터가 자라요. 친구들과 파티를 만들어 몬스터를 물리치는 자기관리 RPG.">
+<link rel="stylesheet" href="assets/home.css?v=1">
+<script src="assets/home.js?v=1" defer></script>
 </head>
 <body>
 
-<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<nav class="nav" aria-label="페이지 메뉴">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top"><img src="assets/img/logo.png" alt="헬파티" width="240" height="158"></a>
+    <div class="navlinks">
+      <a href="#day">사용법</a>
+      <a href="#monster">몬스터</a>
+      <a href="#closet">옷장</a>
+      <a href="#event">이벤트</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">문의</a>
+    </div>
+    <a class="nav-cta" href="#get">다운로드</a>
+  </div>
+</nav>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>HELPARTY</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴</button>
-    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
-      <ul>
-        <li><a href="index.html">홈</a></li>
-        <li><a href="index.html#contact">문의</a></li>
-        <li><a href="privacy.html">개인정보처리방침</a></li>
-        <li><a href="terms.html">이용약관</a></li>
-      </ul>
-    </nav>
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1 class="h1"><span class="kw">운동 · 식단 · 걸음 · 수면 인증 자기관리 앱</span>오늘 하루가<br>그대로 게임이 돼요</h1>
+    <p class="lede">평소처럼 자고, 먹고, 걷고, 운동하세요. 헬파티가 기록해서 캐릭터를 키우고, 친구들과 함께 몬스터를 물리쳐요.</p>
+    <div class="ctas">
+      <a class="btn pri store" data-store="ios" href="https://apps.apple.com/kr/app/id6798905916" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.2 8.5c0-1.7 1.4-2.5 1.5-2.6-.8-1.2-2-1.3-2.5-1.3-1-.1-2 .6-2.5.6s-1.3-.6-2.2-.6C4.4 4.6 3.3 5.3 2.7 6.4c-1.2 2.1-.3 5.2.9 6.9.6.8 1.2 1.7 2.1 1.7.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c.9 0 1.5-.9 2-1.7.6-.9.9-1.8.9-1.9 0 0-1.8-.7-1.8-2.9zM9.6 3.5c.5-.6.8-1.4.7-2.2-.7 0-1.5.5-2 1.1-.4.5-.8 1.3-.7 2.1.8.1 1.5-.4 2-1z"/></svg>App Store에서 받기</a>
+      <a class="btn alt store" data-store="android" href="https://play.google.com/store/apps/details?id=com.helparty" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="#00d7fe" d="M1.6 1.1 8.8 8l-7.2 6.9c-.3-.2-.4-.5-.4-.9V2c0-.4.1-.7.4-.9z"/><path fill="#ffce00" d="m11.2 5.6 2.7 1.5c.8.5.8 1.3 0 1.8l-2.7 1.5L8.8 8z"/><path fill="#ff3a44" d="M11.2 10.4 8.8 8l-7.2 6.9c.3.3.8.3 1.3 0z"/><path fill="#00f076" d="M11.2 5.6 2.9 1.1c-.5-.3-1-.3-1.3 0L8.8 8z"/></svg>Google Play에서 받기</a>
+    </div>
+    <p class="meta"><span>무료</span><span aria-hidden="true">·</span><span>iPhone, Android</span><span aria-hidden="true">·</span><span>11월 1일 출시</span></p>
+  </div>
+  <div class="wrap">
+    <div class="hero-fan" aria-hidden="true">
+      <div class="ph l"><img src="assets/img/shots/shot3.webp" alt="" width="600" height="1304"></div>
+      <div class="ph c"><img src="assets/img/shots/shot1.webp" alt="" width="600" height="1304"></div>
+      <div class="ph r"><img src="assets/img/shots/shot2.webp" alt="" width="600" height="1304"></div>
+    </div>
   </div>
 </header>
 
-<main id="main">
-
-  <section class="hero">
-    <div class="container">
-      <p class="badge">2026년 11월 1일 출시</p>
-      <h1>자기관리를<br>게임처럼.</h1>
-      <p class="lede">
-        걸음, 수면, 식단, 운동을 인증하면 캐릭터 능력치가 오릅니다.
-        친구들과 파티를 만들고, 키운 능력치로 몬스터 스테이지를 하나씩 깨 보세요.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://apps.apple.com/kr/app/id6798905916">App Store</a>
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.helparty">Google Play</a>
-        <a class="btn btn-ghost" href="https://helparty.web.app/onboarding">앱 소개 보기</a>
+<main>
+  <!-- Scroll-pinned day: the section is tall, its inner frame sticks, and scroll progress drives the clock. -->
+  <section class="day" id="day" aria-labelledby="day-title">
+    <div class="day-pin" id="day-pin" data-phase="morning">
+      <div class="wrap day-grid">
+        <div class="day-text">
+          <h2 class="day-title" id="day-title">헬파티와 보내는 하루</h2>
+          <p class="day-clock" aria-hidden="true"><span id="day-clock">07:30</span></p>
+          <div class="day-track" aria-hidden="true"><i class="day-sun" id="day-sun"></i></div>
+          <ol class="day-slots" id="day-slots">
+            <li class="day-slot is-on">
+              <p class="day-time">07:30</p>
+              <h3>일어나면 수면이 들어와 있어요</h3>
+              <p>잠든 시간은 건강 앱에서 알아서 불러와요. 눈 뜨자마자 오늘 첫 인증이 끝나 있어요.</p>
+              <span class="res">수면 인증 · 스탯 +5</span>
+            </li>
+            <li class="day-slot">
+              <p class="day-time">10:00</p>
+              <h3>어제 한 만큼 스탯이 정산돼요</h3>
+              <p>목표를 채운 영역은 +2가 더 붙고, 빠뜨린 영역은 -3이에요. 홈에서 바뀐 스탯을 확인해요.</p>
+              <span class="res">매일 아침 10시 정산</span>
+            </li>
+            <li class="day-slot">
+              <p class="day-time">12:40</p>
+              <h3>점심 메뉴를 남겨요</h3>
+              <p>먹은 음식을 검색해서 기록하면 식단 스탯이 올라요. 하루 중 직접 입력하는 건 식단과 운동뿐이에요.</p>
+              <span class="res">식단 인증 · 스탯 +5</span>
+            </li>
+            <li class="day-slot">
+              <p class="day-time">19:00</p>
+              <h3>퇴근길 걸음은 파티 순위로</h3>
+              <p>걸음 수가 자동으로 쌓이고, 파티원끼리 오늘 누가 제일 많이 걸었는지 겨뤄요.</p>
+              <span class="res">걸음 인증 · 스탯 +5</span>
+            </li>
+            <li class="day-slot">
+              <p class="day-time">20:30</p>
+              <h3>운동하고 몬스터를 때려요</h3>
+              <p>오늘 한 운동을 고르면 운동 스탯이 올라요. 오른 스탯으로 지방 몬스터와 한 판 붙어요.</p>
+              <span class="res">운동 인증 · 스탯 +5</span>
+            </li>
+            <li class="day-slot">
+              <p class="day-time">22:00</p>
+              <h3>쉰 친구에게는 꿀밤</h3>
+              <p>파티 화면에서 오늘 쉰 친구가 보여요. 친구 홈에 가서 꿀밤을 때리거나 방명록으로 응원해요.</p>
+              <span class="res">파티 · 꿀밤 · 방명록</span>
+            </li>
+          </ol>
+          <div class="day-dots" id="day-dots" role="group" aria-label="시간 고르기">
+            <button type="button" aria-label="07:30 수면"></button>
+            <button type="button" aria-label="10:00 스탯 정산"></button>
+            <button type="button" aria-label="12:40 식단"></button>
+            <button type="button" aria-label="19:00 걸음"></button>
+            <button type="button" aria-label="20:30 운동"></button>
+            <button type="button" aria-label="22:00 꿀밤"></button>
+          </div>
+        </div>
+        <div class="day-visual" aria-hidden="true">
+          <div class="dv is-on">
+            <div class="dv-card"><img src="assets/img/day/char_m.webp" alt="" width="400" height="630"></div>
+            <p class="dv-chip">어젯밤 수면 7시간 10분 · 자동 기록</p>
+          </div>
+          <div class="dv"><div class="ph"><img src="assets/img/shots/shot1.webp" alt="" width="600" height="1304" loading="lazy"></div><p class="dv-chip">오늘 남은 인증이 홈에 보여요</p></div>
+          <div class="dv">
+            <div class="dv-card"><img src="assets/img/day/char_f.webp" alt="" width="400" height="630" loading="lazy"></div>
+            <p class="dv-chip">점심 · 닭가슴살 샐러드 기록</p>
+          </div>
+          <div class="dv"><div class="ph"><img src="assets/img/shots/shot6.webp" alt="" width="600" height="1304" loading="lazy"></div><p class="dv-chip">파티 안 걸음 수 순위</p></div>
+          <div class="dv"><div class="ph"><img src="assets/img/shots/shot2.webp" alt="" width="600" height="1304" loading="lazy"></div><p class="dv-chip">몬스터와 한 턴씩 전투</p></div>
+          <div class="dv"><div class="ph"><img src="assets/img/shots/shot5.webp" alt="" width="600" height="1304" loading="lazy"></div><p class="dv-chip">친구 홈에서 꿀밤과 방명록</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">무엇을 하는 앱인가</p>
-      <h2>기록이 곧 성장이 되는 구조</h2>
-      <p>
-        동기부여를 의지에만 맡기지 않습니다. 매일의 인증이 캐릭터 능력치로 환산되고,
-        그 능력치로 몬스터와 싸우도록 설계했습니다.
-      </p>
+  <section class="sec" aria-labelledby="loop-title">
+    <div class="wrap">
+      <h2 class="h2" id="loop-title">매일 반복되는<br>네 단계</h2>
+      <ol class="loop">
+        <li><em>1 · 인증</em><b>걸음 · 수면 · 식단 · 운동</b><span>하루 네 가지를 기록해요. 걸음과 수면은 자동이에요.</span></li>
+        <li><em>2 · 스탯</em><b>지구력 · 회복력 · 근력 · 컨디션</b><span>영역마다 0~250, 합계로 캐릭터 체형이 바뀌어요.</span></li>
+        <li><em>3 · 전투</em><b>몬스터 스테이지</b><span>오른 스탯으로 몬스터를 하나씩 깨요.</span></li>
+        <li><em>4 · 보상</em><b>코인 · 옷 · 칭호</b><span>미션으로 모은 코인으로 캐릭터를 꾸며요.</span></li>
+      </ol>
+    </div>
+  </section>
 
-      <div class="cards">
-        <article class="card">
-          <p class="card-index">01</p>
-          <h3>하루 네 가지 인증</h3>
-          <p>걸음, 수면, 식단, 운동을 인증하면 지구력·회복력·근력·컨디션 능력치가 오릅니다. 걸음과 수면은 건강 앱에서 자동으로 불러옵니다.</p>
-        </article>
-        <article class="card">
-          <p class="card-index">02</p>
-          <h3>캐릭터 성장</h3>
-          <p>능력치를 합친 점수에 따라 캐릭터 체형이 바뀝니다. 인증을 빠뜨리면 능력치가 내려가서 꾸준함이 그대로 드러납니다. 미션으로 모은 코인으로 옷도 사 입힐 수 있습니다.</p>
-        </article>
-        <article class="card">
-          <p class="card-index">03</p>
-          <h3>파티와 몬스터</h3>
-          <p>친구들과 파티를 만들어 서로의 인증 현황을 보고, 쉬는 친구에게는 꿀밤을 보냅니다. 키운 능력치로 몬스터 스테이지를 깹니다. 혼자보다 덜 포기하게 됩니다.</p>
-        </article>
+  <section class="sec gray" id="monster" aria-labelledby="monster-title">
+    <div class="wrap split">
+      <div class="split-text">
+        <h2 class="h2" id="monster-title">키운 스탯으로<br>몬스터를 깨요</h2>
+        <p class="sub">스테이지를 깰수록 몬스터가 커지고 강해져요. 1단계 지방은 여기서 바로 때려 볼 수 있어요.</p>
+        <p class="fine">파티원들과 함께 깨는 보스 스테이지는 준비 중이에요.</p>
+      </div>
+      <div class="demo-card">
+        <div class="demo-tabs" role="tablist" aria-label="몬스터">
+          <button type="button" class="demo-tab is-current" role="tab" id="tab-battle" aria-controls="panel-battle" aria-selected="true">직접 때려 보기</button>
+          <button type="button" class="demo-tab" role="tab" id="tab-dex" aria-controls="panel-dex" aria-selected="false" tabindex="-1">몬스터 도감 <span class="dex-count">1/6</span></button>
+        </div>
+        <div class="demo-panel" role="tabpanel" id="panel-battle" aria-labelledby="tab-battle">
+          <p class="demo-hint">지방 몬스터를 톡톡 눌러서 때려 보세요!</p>
+          <div class="battle" id="battle">
+            <div class="battle-head">
+              <span class="battle-name" id="battle-name">1단계 지방</span>
+              <div class="hp" role="progressbar" aria-label="몬스터 체력" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="hp">
+                <div class="hp-fill" id="hp-fill"></div>
+              </div>
+            </div>
+            <button type="button" class="monster" id="monster" aria-label="지방 몬스터 때리기">
+              <img id="monster-img" src="assets/img/fat_lv1.webp" alt="" width="360" height="330" draggable="false">
+              <span class="lose" aria-hidden="true">LOSE</span>
+            </button>
+            <p class="battle-msg" id="battle-msg">눌러서 공격!</p>
+            <button type="button" class="battle-retry" id="battle-retry" hidden>처음부터 다시 하기</button>
+          </div>
+        </div>
+        <div class="demo-panel dex" role="tabpanel" id="panel-dex" aria-labelledby="tab-dex" hidden>
+          <p class="demo-hint">나머지 몬스터는 누구일까요? 눌러서 힌트를 보세요</p>
+          <ul class="dex-grid">
+            <li><button type="button" class="dex-card" data-hint="쉽게 붙고 좀처럼 떨어지지 않는다" aria-label="지방 몬스터"><img src="assets/img/dex/fat.webp" alt="" width="240" height="240"><span>지방</span></button></li>
+            <li><button type="button" class="dex-card is-locked" data-hint="오늘은 쉬어도 된다고 속삭인다" aria-label="정체를 모르는 몬스터"><img src="assets/img/dex/sloth.webp" alt="" width="240" height="240"><span>???</span></button></li>
+            <li><button type="button" class="dex-card is-locked" data-hint="이제 막 자라기 시작한 근육" aria-label="정체를 모르는 몬스터"><img src="assets/img/dex/muscle.webp" alt="" width="240" height="240"><span>???</span></button></li>
+            <li><button type="button" class="dex-card is-locked" data-hint="한 입만 더 먹자고 조른다" aria-label="정체를 모르는 몬스터"><img src="assets/img/dex/hunger.webp" alt="" width="240" height="240"><span>???</span></button></li>
+            <li><button type="button" class="dex-card is-locked" data-hint="자꾸 다른 곳으로 시선을 끈다" aria-label="정체를 모르는 몬스터"><img src="assets/img/dex/focus.webp" alt="" width="240" height="240"><span>???</span></button></li>
+            <li><button type="button" class="dex-card is-locked" data-hint="조금만 더 보다 자자고 붙잡는다" aria-label="정체를 모르는 몬스터"><img src="assets/img/dex/insomnia.webp" alt="" width="240" height="240"><span>???</span></button></li>
+          </ul>
+          <p class="dex-hint" id="dex-hint" role="status">&nbsp;</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-soft">
-    <div class="container">
-      <p class="section-label">로그인</p>
-      <h2>소셜 로그인만 사용합니다</h2>
-      <p>
-        별도의 아이디와 비밀번호를 만들지 않습니다. 아래 수단 중 하나로 로그인하면
-        바로 시작할 수 있습니다.
-      </p>
+  <section class="sec closet" id="closet" aria-labelledby="closet-title">
+    <div class="wrap">
+      <h2 class="h2" id="closet-title">모은 코인으로<br>옷을 사 입어요</h2>
+      <p class="sub">상점에 있는 옷을 지금 바로 입혀 보세요. 앱에서는 매일 미션을 깨서 모은 코인으로 사요.</p>
+      <div class="closet-layout">
+        <div class="closet-stage">
+          <div class="seg" role="group" aria-label="성별">
+            <button type="button" data-gender="m" aria-pressed="true">남자</button>
+            <button type="button" data-gender="f" aria-pressed="false">여자</button>
+          </div>
+          <div class="seg" role="group" aria-label="체형">
+            <button type="button" data-body="slim" aria-pressed="false">마름</button>
+            <button type="button" data-body="normal" aria-pressed="true">보통</button>
+            <button type="button" data-body="chubby" aria-pressed="false">통통</button>
+            <button type="button" data-body="fat" aria-pressed="false">뚱뚱</button>
+          </div>
+          <div class="closet-fig" id="closet-fig" role="img" aria-label="캐릭터 미리보기"></div>
+          <p class="closet-sum" id="closet-sum" aria-live="polite">기본 옷 · 0 코인</p>
+          <div class="closet-tools">
+            <button type="button" class="btn pri small" id="closet-rand">아무거나 입히기</button>
+            <button type="button" class="btn alt small" id="closet-reset">기본 옷으로</button>
+          </div>
+        </div>
+        <div class="closet-rails" id="closet-rails"></div>
+      </div>
+    </div>
+  </section>
 
-      <ul class="chips">
-        <li class="chip" style="--dot:#4285f4">Google</li>
-        <li class="chip" style="--dot:#8e8e93">Apple</li>
-        <li class="chip" style="--dot:#fee500">카카오</li>
-        <li class="chip" style="--dot:#03c75a">네이버</li>
+  <section class="sec gray" aria-labelledby="bonk-title">
+    <div class="wrap split">
+      <div class="split-text">
+        <h2 class="h2" id="bonk-title">인증을 쉬면 통통해지고,<br>친구한테 꿀밤 맞아요</h2>
+        <p class="sub">네 스탯을 합친 점수로 체형이 정해져요. 왼쪽 막대로 체형을 바꿔 보고, 캐릭터를 눌러 꿀밤을 때려 보세요.</p>
+        <p class="fine">스탯은 매달 1일 새 시즌에 처음부터 다시 쌓여요.</p>
+      </div>
+      <div class="demo-card dress-card">
+        <div class="dress-stage">
+          <div class="body-slider" id="body-slider" role="slider" tabindex="0" aria-label="체형" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="4" aria-valuenow="2" aria-valuetext="보통">
+            <div class="bs-track"><div class="bs-thumb" id="bs-thumb"></div></div>
+            <ol class="bs-labels">
+              <li class="is-locked" data-stop="0">근육</li>
+              <li class="is-locked" data-stop="1">마름</li>
+              <li data-stop="2">보통</li>
+              <li data-stop="3">통통</li>
+              <li class="is-locked" data-stop="4">뚱뚱</li>
+            </ol>
+          </div>
+          <div class="dresser-wrap" id="dresser-wrap">
+            <button type="button" class="dresser" id="dresser" aria-label="캐릭터에게 꿀밤 때리기"></button>
+            <p class="body-toast" id="body-toast" role="status" hidden></p>
+          </div>
+        </div>
+        <p class="dress-caption" id="dress-caption" aria-hidden="true">&nbsp;</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec promise" aria-label="헬파티 약속">
+    <div class="wrap promise-grid">
+      <div class="card"><b>무료예요.</b><span>앱을 받는 것도, 인증하는 것도, 파티를 만드는 것도 돈이 들지 않아요.</span></div>
+      <div class="card"><b>입력할 게 적어요.</b><span>걸음과 수면은 건강 앱에서 알아서 불러와요. 직접 남기는 건 식단과 운동뿐이에요.</span></div>
+      <div class="card"><b>혼자서도 돼요.</b><span>친구가 아직 없어도 인증하고 몬스터를 깰 수 있어요. 파티는 나중에 만들어도 돼요.</span></div>
+    </div>
+  </section>
+
+  <section class="sec gray event" id="event" aria-labelledby="event-title">
+    <div class="wrap split">
+      <div class="split-text">
+        <span class="kw">출시 기념 이벤트 · 11월 1일 ~ 11월 30일</span>
+        <h2 class="h2" id="event-title">지금 가입하면<br>한정판을 드려요</h2>
+        <p class="sub">이 기간에 앱을 받고 회원가입만 하면 돼요. 친구를 파티에 초대하면 더 재밌어요.</p>
+        <p class="claim-name">빼빼로 코스튬</p>
+        <ol class="how">
+          <li>11월 한 달 동안 회원가입한 모든 분께 빼빼로데이를 기념한 한정 코스튬을 드려요</li>
+          <li>지급 일정은 앱에서 알려 드려요</li>
+        </ol>
+        <p class="claim-name">최초의 갓생러 칭호</p>
+        <ol class="how">
+          <li>11월이나 12월 동안 꾸준히 인증해서 캐릭터를 마름 단계까지 만들어요</li>
+          <li>스탯은 매달 1일 새 시즌에 처음부터 다시 쌓여요. 11월에 놓쳐도 12월에 다시 도전할 수 있어요</li>
+          <li>마름 단계가 되는 순간 칭호가 자동으로 들어오고 알림이 와요</li>
+          <li>받은 칭호는 홈의 칭호 배지를 눌러 장착해요</li>
+        </ol>
+      </div>
+      <ul class="rewards">
+        <li class="reward">
+          <div class="reward-art"><img src="assets/img/rewards/item_pepero.webp" alt="빼빼로 코스튬" width="360" height="360"></div>
+          <p class="reward-kind">한정 코스튬</p>
+          <p class="reward-name">빼빼로</p>
+          <p class="reward-cond">11월 가입자 모두</p>
+        </li>
+        <li class="reward">
+          <div class="reward-art"><img src="assets/img/rewards/title_first_godsaeng_v2.webp" alt="최초의 갓생러 칭호" width="360" height="360"></div>
+          <p class="reward-kind">한정 칭호</p>
+          <p class="reward-name">최초의 갓생러</p>
+          <p class="reward-cond">11~12월 마름 달성</p>
+        </li>
       </ul>
-
-      <div class="note">
-        <strong>받는 정보는 회원을 구분하기 위한 고유 식별번호 하나뿐입니다.</strong>
-        이름·이메일·연락처를 비롯한 어떤 프로필 정보도 로그인 제공자로부터 전달받지 않습니다.
-        닉네임과 생년월일, 성별은 앱 안에서 직접 입력받습니다. 자세한 내용은
-        <a href="privacy.html">개인정보처리방침</a>에서 확인하세요.
-      </div>
-
-      <div class="note">
-        로그인 수단마다 <strong>서로 다른 계정</strong>이 만들어집니다. 예를 들어 카카오로 가입한 뒤
-        Google로 로그인하면 새 계정으로 시작하게 되므로, 처음 가입할 때 쓴 수단을 기억해 주세요.
-      </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <div class="container">
-      <p class="section-label">개발사</p>
-      <h2>Helparty 팀</h2>
-      <p>
-        Helparty는 학생 개발팀이 만든 자기관리 모바일 앱입니다. 2026년 11월 1일 App Store와 Google Play에 출시했으며,
-        앱은 Flutter로, 서버는 Go 기반 GraphQL API로 개발하고 있습니다.
-        서비스와 개인정보 처리에 관한 문의는 아래 이메일로 보내 주시면 확인 후 답변드립니다.
-      </p>
+  <section class="sec gray" id="login" aria-labelledby="login-title">
+    <div class="wrap">
+      <h2 class="h2" id="login-title">소셜 로그인만 사용해요</h2>
+      <p class="sub">따로 아이디와 비밀번호를 만들지 않아요. Google, Apple, 카카오, 네이버 중 하나로 로그인하면 바로 시작할 수 있어요.</p>
+      <ul class="login-list">
+        <li><b>받는 정보는 회원을 구분하는 고유 식별번호 하나뿐이에요.</b> 이름, 이메일, 연락처를 비롯한 어떤 프로필 정보도 로그인 제공자에게서 받지 않아요. 닉네임, 생년월일, 성별은 앱 안에서 직접 입력해요. 자세한 내용은 <a href="privacy.html">개인정보처리방침</a>에서 확인할 수 있어요.</li>
+        <li><b>로그인 수단마다 서로 다른 계정이 만들어져요.</b> 카카오로 가입한 뒤 Google로 로그인하면 새 계정으로 시작하니, 처음 가입할 때 쓴 수단을 기억해 주세요.</li>
+      </ul>
+    </div>
+  </section>
 
-      <dl class="info-grid">
-        <div class="info-item">
-          <dt>서비스명</dt>
-          <dd>Helparty (헬파티)</dd>
-        </div>
-        <div class="info-item">
-          <dt>문의 · 개인정보 보호책임자</dt>
-          <dd><a href="mailto:inno970b@gmail.com">inno970b@gmail.com</a></dd>
-        </div>
-        <div class="info-item">
-          <dt>서비스 상태</dt>
-          <dd>출시 (App Store · Google Play)</dd>
-        </div>
+  <section class="sec" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 class="h2" id="contact-title">Helparty 팀</h2>
+      <p class="sub">Helparty는 학생 개발팀이 만든 자기관리 모바일 앱이에요. 서비스와 개인정보 처리에 관한 문의는 아래 이메일로 보내 주시면 확인하고 답변드려요.</p>
+      <dl class="info-list">
+        <div><dt>서비스명</dt><dd>Helparty (헬파티)</dd></div>
+        <div><dt>문의 · 개인정보 보호책임자</dt><dd><a href="mailto:inno970b@gmail.com">inno970b@gmail.com</a></dd></div>
+        <div><dt>서비스 상태</dt><dd>출시 (App Store · Google Play)</dd></div>
       </dl>
     </div>
   </section>
 
+  <section class="sec" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 class="h2" id="faq-title">자주 묻는 질문</h2>
+      <div class="faq-list">
+        <details class="faq"><summary>무료인가요?</summary><p>네, 무료예요. 미션에서 광고를 보고 코인을 더 받을 수도 있어요.</p></details>
+        <details class="faq"><summary>어떻게 가입하나요?</summary><p>Apple, Google, 카카오, 네이버 계정으로 가입해요.</p></details>
+        <details class="faq"><summary>아이폰과 안드로이드 모두 되나요?</summary><p>네, App Store와 Google Play에서 모두 받을 수 있어요.</p></details>
+        <details class="faq"><summary>혼자서도 할 수 있나요?</summary><p>네, 인증과 캐릭터 꾸미기는 혼자서도 할 수 있어요. 파티는 나중에 언제든 만들거나 초대 코드로 참여할 수 있어요.</p></details>
+        <details class="faq"><summary>무엇을 인증하나요?</summary><p>걸음 수, 수면, 식단, 운동 네 가지예요. 인증할수록 캐릭터 스탯이 오르고 체형이 바뀌어요.</p></details>
+        <details class="faq"><summary>스탯은 어떻게 오르고 내려가나요?</summary><p>영역마다 그날 처음 인증하면 +5, 목표를 채우면 다음 날 아침 10시에 +2가 더 붙어요. 인증을 빠뜨린 영역은 -3이에요. 영역마다 0~250, 네 영역을 합쳐 최대 1000이에요.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec close" id="get" aria-labelledby="get-title">
+    <div class="wrap">
+      <h2 class="h2" id="get-title">내일 아침 7시 반,<br>첫 인증이 기다려요</h2>
+      <p class="sub">오늘 밤 앱을 받아 두면 자는 동안 첫 인증이 끝나요.</p>
+      <div class="ctas">
+        <a class="btn pri store" data-store="ios" href="https://apps.apple.com/kr/app/id6798905916" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.2 8.5c0-1.7 1.4-2.5 1.5-2.6-.8-1.2-2-1.3-2.5-1.3-1-.1-2 .6-2.5.6s-1.3-.6-2.2-.6C4.4 4.6 3.3 5.3 2.7 6.4c-1.2 2.1-.3 5.2.9 6.9.6.8 1.2 1.7 2.1 1.7.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c.9 0 1.5-.9 2-1.7.6-.9.9-1.8.9-1.9 0 0-1.8-.7-1.8-2.9zM9.6 3.5c.5-.6.8-1.4.7-2.2-.7 0-1.5.5-2 1.1-.4.5-.8 1.3-.7 2.1.8.1 1.5-.4 2-1z"/></svg>App Store에서 받기</a>
+        <a class="btn alt store" data-store="android" href="https://play.google.com/store/apps/details?id=com.helparty" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="#00d7fe" d="M1.6 1.1 8.8 8l-7.2 6.9c-.3-.2-.4-.5-.4-.9V2c0-.4.1-.7.4-.9z"/><path fill="#ffce00" d="m11.2 5.6 2.7 1.5c.8.5.8 1.3 0 1.8l-2.7 1.5L8.8 8z"/><path fill="#ff3a44" d="M11.2 10.4 8.8 8l-7.2 6.9c.3.3.8.3 1.3 0z"/><path fill="#00f076" d="M11.2 5.6 2.9 1.1c-.5-.3-1-.3-1.3 0L8.8 8z"/></svg>Google Play에서 받기</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p style="margin:0">&copy; 2026 helparty. All rights reserved.</p>
-    <ul class="footer-links">
-      <li><a href="index.html#contact">문의</a></li>
-      <li><a href="privacy.html">개인정보처리방침</a></li>
-      <li><a href="terms.html">이용약관</a></li>
-      <li><a href="account-deletion.html">계정 삭제</a></li>
-    </ul>
-    <ul class="footer-biz">
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-row">
+      <span class="foot-brand"><img src="assets/img/logo.png" alt="" width="240" height="158">헬파티</span>
+      <nav class="foot-links" aria-label="약관과 정책">
+        <a href="#contact">문의</a>
+        <a class="strong" href="privacy.html">개인정보처리방침</a>
+        <a class="strong" href="terms.html">이용약관</a>
+        <a href="account-deletion.html">계정 삭제</a>
+      </nav>
+    </div>
+    <ul class="foot-biz">
       <li>상호 이노(INNO)</li>
       <li>대표 이규민</li>
       <li>사업자등록번호 488-14-03145</li>
       <li>전화 <a href="tel:070-8095-4128">070-8095-4128</a></li>
       <li>이메일 <a href="mailto:inno970b@gmail.com">inno970b@gmail.com</a></li>
     </ul>
+    <div class="foot-legal">
+      <span>&copy; 2026 helparty. All rights reserved.</span>
+    </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
 </body>
 </html>
