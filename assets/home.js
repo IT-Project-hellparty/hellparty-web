@@ -115,19 +115,35 @@
 
   // Bottom to top, the app's stacking order. Body and eyebrows are always worn.
   var ORDER = ['body', 'hair', 'shoes', 'bottom', 'top', 'acs', 'eyebrow'];
-  // Names and prices as the shop sells them (migrations 000043, 000051).
+  // Names, prices and gender locks as the prod shop sells them (migrations 000043, 000051, 000059).
+  // A fourth entry, 'm' or 'f', limits the item to that gender's characters.
+  // camelcoat1 is left out while it stays hidden in the prod shop.
   var CATALOG = [
     { slot: 'hair', title: '헤어', items: [
-      ['default_hair', '기본 헤어', 0], ['hair1', '헤어 01', 150], ['hair2', '헤어 02', 150], ['hair3', '헤어 03', 150],
+      ['default_hair', '기본 헤어', 0], ['hair1', '헤어', 150], ['hair2', '헤어 02', 150], ['hair3', '헤어 03', 150],
       ['hair4', '헤어 04', 150], ['hair5', '헤어 05', 150], ['hair6', '헤어 06', 150], ['hair7', '헤어 07', 150],
-      ['hair8', '헤어 08', 150], ['hair9', '헤어 09', 150], ['hair10', '헤어 10', 150], ['hair11', '헤어 11', 150]] },
+      ['hair8', '헤어 08', 150], ['hair9', '헤어 09', 150], ['hair10', '헤어 10', 150], ['hair11', '헤어 11', 150],
+      ['comma1', '쉼표 머리', 150, 'm'], ['crop1', '크롭 컷', 150, 'm'], ['leaf1', '리프 컷', 150, 'm'], ['wolf1', '울프 컷', 150, 'm'],
+      ['bob1', '단발', 150, 'f'], ['hime1', '히메 컷', 150, 'f'], ['hush1', '허쉬 컷', 150, 'f'], ['lavtwin1', '라벤더 트윈테일', 150, 'f'],
+      ['pony1', '포니테일', 150, 'f'], ['twintail1', '트윈테일', 150, 'f'], ['wave1', '웨이브', 150, 'f']] },
     { slot: 'top', title: '상의', items: [
-      ['default_top', '기본 상의', 0], ['hoodie1', '후드티', 300], ['top1', '바람막이', 300], ['top2', '니트 가디건', 300],
-      ['top3', '샴브레이 셔츠', 300], ['top4', '데님 셔츠', 300], ['top5', '화이트 셔츠', 300]] },
+      ['default_top', '기본 상의', 0], ['hoodie1', '후드티', 300], ['hoodie_black', '블랙 후드티', 300], ['top1', '바람막이', 300],
+      ['top2', '니트 가디건', 300], ['top3', '샴브레이 셔츠', 300], ['top4', '데님 셔츠', 300], ['top5', '화이트 셔츠', 300],
+      ['plaid1', '체크 셔츠', 300], ['layersweat1', '셔츠 레이어드 맨투맨', 300], ['charcoaljk1', '차콜 셔츠재킷', 300],
+      ['tealjk1', '틸 워크 재킷', 300], ['burgblouson1', '버건디 블루종', 300], ['olivepad1', '올리브 패딩', 300],
+      ['crophood1', '크롭 후드티', 300, 'f'], ['darkstar1', '거미줄 긴팔 티', 300, 'f'], ['jiraiblouse1', '프릴 블라우스', 300, 'f'],
+      ['lilachood1', '라일락 집업 후드', 300, 'f']] },
     { slot: 'bottom', title: '하의', items: [
-      ['default_bottom', '기본 하의', 0], ['jeans1', '청바지', 250], ['bottom1', '베이지 와이드 팬츠', 250], ['bottom2', '흑청 와이드 진', 250]] },
+      ['default_bottom', '기본 하의', 0], ['jeans1', '청바지', 250], ['washdenim1', '워싱 데님', 250], ['bottom1', '베이지 와이드 팬츠', 250],
+      ['bottom2', '흑청 와이드 진', 250], ['navywide1', '네이비 와이드 팬츠', 250], ['wideslacks1', '와이드 슬랙스', 250],
+      ['barrelpants1', '배럴 팬츠', 250], ['camelpants1', '카멜 팬츠', 250], ['chaincargo1', '체인 카고 팬츠', 250],
+      ['bermuda1', '버뮤다 팬츠', 250], ['shorts1', '블랙 반바지', 250],
+      ['buckleskirt1', '버클 스커트', 250, 'f'], ['jiraiskirt1', '리본 프릴 스커트', 250, 'f'], ['lilacskirt1', '라일락 체크 스커트', 250, 'f']] },
     { slot: 'shoes', title: '신발', items: [
-      ['default_shoes', '기본 신발', 0], ['sneakers1', '운동화', 200]] },
+      ['default_shoes', '기본 신발', 0], ['sneakers1', '운동화', 200], ['chunkysneak1', '청키 스니커즈', 200], ['minisneak1', '미니 스니커즈', 200],
+      ['retrorun1', '레트로 러닝화', 200], ['derby1', '더비 슈즈', 200], ['camelshoes1', '카멜 스웨이드 슈즈', 200], ['clog1', '클로그', 200],
+      ['boots1', '청키 부츠', 200], ['combatboots1', '컴뱃 부츠', 200], ['trekboots1', '트레킹 부츠', 200],
+      ['maryjane1', '메리제인', 200, 'f'], ['furboots1', '퍼 레그워머 부츠', 200, 'f'], ['stripeboots1', '줄무늬 부츠', 200, 'f']] },
     { slot: 'acs', title: '액세서리', items: [
       [null, '없음', 0], ['acs1', '안경', 120], ['acs2', '반지', 100], ['acs3', '귀걸이', 100], ['acs4', '손목 밴드', 80],
       ['acs5', '손목시계', 150], ['acs6', '헤드폰', 120], ['acs7', '목걸이', 120], ['acs8', '유선 이어폰', 100]] }
@@ -138,6 +154,7 @@
   var layers = {};
 
   function copy(o) { var r = {}; for (var k in o) r[k] = o[k]; return r; }
+  function fits(it) { return !it[3] || it[3] === state.gender; }
   function dir() { return 'assets/img/closet/' + state.gender + '_' + state.body + '/'; }
   function itemOf(slot, key) {
     var group = CATALOG.filter(function (g) { return g.slot === slot; })[0];
@@ -197,10 +214,16 @@
       var slot = chip.getAttribute('data-slot');
       var key = chip.getAttribute('data-key') || null;
       chip.setAttribute('aria-pressed', state.pick[slot] === key ? 'true' : 'false');
+      chip.hidden = !fits(itemOf(slot, key));
       var thumb = chip.querySelector('img');
-      if (thumb) thumb.src = 'assets/img/closet/thumb/' + key + '_' + state.gender + '.webp';
+      if (thumb && !chip.hidden) thumb.src = 'assets/img/closet/thumb/' + key + '_' + state.gender + '.webp';
+    });
+    counts.forEach(function (c) {
+      c.el.textContent = c.items.filter(function (it) { return it[2] && fits(it); }).length + '개 판매 중';
     });
   }
+
+  var counts = [];
 
   CATALOG.forEach(function (group) {
     var rail = document.createElement('section');
@@ -208,7 +231,7 @@
     var h = document.createElement('h3');
     h.textContent = group.title + ' ';
     var count = document.createElement('small');
-    count.textContent = group.items.filter(function (it) { return it[2]; }).length + '개 판매 중';
+    counts.push({ el: count, items: group.items });
     h.appendChild(count);
     var box = document.createElement('div');
     box.className = 'chips';
@@ -254,6 +277,11 @@
       document.querySelectorAll('[data-gender]').forEach(function (b) {
         b.setAttribute('aria-pressed', b === button ? 'true' : 'false');
       });
+      // Gender-only pieces have no art for the other gender.
+      CATALOG.forEach(function (g) {
+        var it = itemOf(g.slot, state.pick[g.slot]);
+        if (it && !fits(it)) state.pick[g.slot] = DEFAULTS[g.slot];
+      });
       paint();
     });
   });
@@ -272,7 +300,7 @@
   });
   document.getElementById('closet-rand').addEventListener('click', function () {
     CATALOG.forEach(function (g) {
-      var sold = g.items.filter(function (it) { return it[2]; });
+      var sold = g.items.filter(function (it) { return it[2] && fits(it); });
       state.pick[g.slot] = sold[Math.floor(Math.random() * sold.length)][0];
     });
     paint();
